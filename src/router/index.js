@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
+import ItemView from '../views/ItemView.vue'
 
 Vue.use(VueRouter);
 
@@ -13,6 +14,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/items/:itemId',
+    name: 'ItemView',
+    component: ItemView
   },
   {
     path: '/about',

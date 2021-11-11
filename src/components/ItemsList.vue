@@ -7,7 +7,7 @@
     </v-row>
     
     <v-row class="list__cafes-content">
-      <v-col md="4" v-for="item in items_list" :key="item.id">
+      <v-col md="4" v-for="item in items" :key="item.id">
         <v-card>
           
           <v-img
@@ -29,11 +29,12 @@
   
   </v-container>
 </template>
+
 <script>
 export default {
   name: 'ItemsList',
   data: () => ({
-    items_list: [
+    items: [
       {
         id: 0,
         title: 'Cafe 1',

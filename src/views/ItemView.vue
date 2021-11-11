@@ -12,7 +12,14 @@
 
 <script>
 export default {
-  name: 'Contact',
-  data: () => ({})
+  name: 'ItemView',
+  data: () => ({
+    item: {
+      id: 0,
+      title: 'Cafe 1',
+      description: 'The best!',
+      img: '../assets/logo.svg'
+    },
+  })
 }
 </script>
