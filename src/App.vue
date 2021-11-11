@@ -1,5 +1,4 @@
 <template>
-  <div id="app">
   <v-app>
     <v-app-bar
       app
@@ -17,11 +16,9 @@
       </div>
     </v-app-bar>
     <v-main>
-      <!-- Main! -->
+      <router-view />
     </v-main>
   </v-app>
-    <router-view />
-  </div>
 </template>
 
 <style lang="scss">
