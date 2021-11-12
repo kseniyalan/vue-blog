@@ -2,31 +2,31 @@
   {
     "id": 0,
     "title": "Cafe 1",
-    "description_short": "The best!",
+    "description_short": "The best! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "img": "logo.svg"
   },
   {
     "id": 1,
     "title": "Cafe 2",
-    "description_short": "The second",
+    "description_short": "The second! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "img": "logo.svg"
   },
   {
     "id": 2,
     "title": "Cafe 3",
-    "description_short": "The third",
+    "description_short": "The third! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "img": "logo.svg"
   },
   {
     "id": 3,
     "title": "Cafe 4",
-    "description_short": "The fourth",
+    "description_short": "The fourth! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "img": "logo.svg"
   },
   {
     "id": 4,
     "title": "Cafe 5",
-    "description_short": "The fifth",
+    "description_short": "The fifth! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "img": "logo.svg"
   }
 ]

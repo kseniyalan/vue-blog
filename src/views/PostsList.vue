@@ -29,12 +29,16 @@
             height="250"
             :src="postItem.img"
           ></v-img>
-          <v-card-title>
-            <h3 class="text-h4">{{ postItem.title }}</h3>
+          <v-card-title class="d-flex justify-center">
+            <h3 class="text-h6 text-xl-h5">{{ postItem.title }}</h3>
           </v-card-title>
+
+          <v-row class="d-flex justify-center">
+            <v-col cols="12" sm="4" md="4" lg="4" xl="4"><v-divider /></v-col>
+          </v-row>
           
           <v-card-text>
-            <p class="text-body-1">{{ postItem.description_short }}</p>
+            <p class="text-body-2 text-xl-body-1">{{ postItem.description_short }}</p>
           </v-card-text>
         
         </v-card>
