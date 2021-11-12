@@ -29,7 +29,7 @@
   text-align: center;
   color: #2c3e50;
   background: url('./assets/images/coconuts.jpg') no-repeat center center fixed !important;
-  background-size: contain;
+  background-size: cover;
 }
 
 #nav {

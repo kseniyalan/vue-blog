@@ -27,7 +27,7 @@
           </v-card-title>
           
           <v-card-text>
-            <p class="text-body-1">{{ postItem.description }}</p>
+            <p class="text-body-1">{{ postItem.description_short }}</p>
           </v-card-text>
         
         </v-card>

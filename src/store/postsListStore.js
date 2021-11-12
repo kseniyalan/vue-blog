@@ -10,31 +10,30 @@ export default {
     posts: [],
   },
   mutations: {
-    POSTS_LIST_LOAD_START(state) {
+    POSTS_LIST_LOADING_START(state) {
       state.ready = false; 
       state.loading = true;
       state.posts = [];
     },
-    POSTS_LIST_LOAD_ERROR(state) {
+    POSTS_LIST_LOADING_ERROR(state) {
       state.ready = false;
       state.loading = false;
     },
-    POSTS_LIST_LOAD_SUCCESS(state, payload) {
+    POSTS_LIST_LOADING_SUCCESS(state, payload) {
       state.loading = false;
       state.posts = payload.posts;
       state.ready = true;
     }
   },
   actions: {
-    async getPostsListAction({ commit }, payload) { 
-      commit("POSTS_LIST_LOAD_START");
+    async getPostsListAction({ commit }) { 
+      commit("POSTS_LIST_LOADING_START");
       let posts;
       try {
-        const accessToken = localStorage.getItem("accessToken");
-        posts = await getPostsList(accessToken, payload);
-        return commit("POSTS_LIST_LOAD_SUCCESS", posts);
+        posts = await getPostsList();
+        return commit("POSTS_LIST_LOADING_SUCCESS", posts);
       } catch (err) {
-        return commit("POSTS_LIST_LOAD_ERROR");
+        return commit("POSTS_LIST_LOADING_ERROR");
       }
     }
   },
