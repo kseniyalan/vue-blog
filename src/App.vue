@@ -6,7 +6,7 @@
       elevation="2"
     >
       <v-app-bar-title>
-        <h3 class="text-h4">Just Food</h3>
+        <h3 class="text-h4 teal--text text--lighten-1">Just Food</h3>
       </v-app-bar-title>
       <v-spacer></v-spacer>
       <div id="nav">
@@ -34,7 +34,6 @@
 
 #nav {
   padding: 10px;
-
   a {
     font-weight: bold;
     color: #2c3e50;
@@ -42,7 +41,7 @@
     text-transform: uppercase;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #26A69A;
     }
   }
 

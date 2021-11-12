@@ -5,7 +5,7 @@
         <v-card :loading="loading">
           <template slot="progress">
             <v-progress-linear
-              color="#42b983"
+              color="teal lighten-1"
               height="3"
               indeterminate
             />
