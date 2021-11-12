@@ -5,8 +5,15 @@
         <h2 class="text-center text-h3 py-3">There will be 4 wide elements</h2>
       </v-col>
     </v-row>
-    
-    <v-row class="list__cafes-content">
+    <v-row v-if="loading" class="d-flex justify-center mb-6">
+      <v-col md="4">
+        <v-progress-circular
+          indeterminate
+          color="#42b983"
+        />
+      </v-col>
+    </v-row>
+    <v-row v-if="ready" class="list__cafes-content">
       <v-col md="4" v-for="postItem in posts" :key="postItem.id"  @click="clickOnPost(postItem.id)">
         <v-card>
           
@@ -34,46 +41,15 @@
 import { mapState, mapGetters } from 'vuex';
 export default {
   name: 'PostsList',
-  data: () => ({
-    posts: [
-      {
-        id: 0,
-        title: 'Cafe 1',
-        description: 'The best!',
-        img: '../assets/logo.svg'
-      },
-      {
-        id: 1,
-        title: 'Cafe 2',
-        description: 'Lorem ipsum',
-        img: '../assets/logo.svg'
-      },
-      {
-        id: 2,
-        title: 'Cafe 3',
-        description: 'Lorem ipsum',
-        img: '../assets/logo.svg'
-      },
-      {
-        id: 3,
-        title: 'Cafe 4',
-        description: 'Lorem ipsum',
-        img: '../assets/logo.svg'
-      },
-      {
-        id: 4,
-        title: 'Cafe 5',
-        description: 'Lorem ipsum',
-        img: '../assets/logo.svg'
-      },
-    ]
-  }),
+  props: {},
+  data: () => ({}),
   computed: {
     ...mapState({
-      //loading: state => state.posts.loading,
+      loading: state => state.posts.loading,
+      ready: state => state.posts.ready,
     }),
     ...mapGetters({ 
-
+      posts: 'posts/getPosts',
     }),
   },
   methods: {
@@ -81,6 +57,13 @@ export default {
       const url = `/posts/${postId}`;
       this.$router.push(url);
     },
+    getPostsList(){
+      this.$store.dispatch('posts/getPostsListAction');
+    },
+  },
+  created() {
+    //Loading posts list
+    this.getPostsList();
   },
 }
 </script>

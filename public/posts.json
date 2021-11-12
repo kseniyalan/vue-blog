@@ -1,0 +1,33 @@
+{ "posts": [
+  {
+    "id": 0,
+    "title": "Cafe 1",
+    "description": "The best!",
+    "img": "../assets/logo.svg"
+  },
+  {
+    "id": 1,
+    "title": "Cafe 2",
+    "description": "Lorem ipsum",
+    "img": "../assets/logo.svg"
+  },
+  {
+    "id": 2,
+    "title": "Cafe 3",
+    "description": "Lorem ipsum",
+    "img": "../assets/logo.svg"
+  },
+  {
+    "id": 3,
+    "title": "Cafe 4",
+    "description": "Lorem ipsum",
+    "img": "../assets/logo.svg"
+  },
+  {
+    "id": 4,
+    "title": "Cafe 5",
+    "description": "Lorem ipsum",
+    "img": "../assets/logo.svg"
+  }
+]
+}
