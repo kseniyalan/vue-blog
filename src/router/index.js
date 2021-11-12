@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 
 import PostsList from '../views/PostsList.vue'
-import About from '../views/About.vue'
+import Home from '../views/Home.vue'
 import Contact from '../views/Contact.vue'
 import PostView from '../views/PostView.vue'
 
@@ -12,8 +12,8 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'PostsList',
-    component: PostsList
+    name: 'Home',
+    component: Home
   },
   {
     path: '/posts/:postId',
@@ -21,9 +21,9 @@ const routes = [
     component: PostView
   },
   {
-    path: '/about',
-    name: 'About',
-    component: About
+    path: '/posts',
+    name: 'PostsList',
+    component: PostsList
   },
   {
     path: '/contact',
