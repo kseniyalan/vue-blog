@@ -3,6 +3,7 @@
     <v-row>
       <v-col>
         <v-card :loading="loading">
+          <!-- Image -->
           <template slot="progress">
             <v-progress-linear
               color="teal lighten-1"
@@ -13,9 +14,16 @@
           <v-parallax
             height="400"
             src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
-            class="d-flex mb-8"
+            class="d-flex"
           />
-          <h2 class="text-h4 mb-2">{{ postItem.title }}</h2>
+
+          <!-- Header -->
+          <div class="post-type mb-8">
+            <div class="type-text">{{ postItem.typeText }}</div>
+          </div>
+          <h2 class="text-h4 mb-2 text-left pl-12 pr-4">{{ postItem.title }}</h2>
+
+          <!-- Content -->
           <v-card-text>
             <div class="font-weight-bold font-italic amber lighten-4 highlighted">
               {{ postItem.description_short }}
@@ -68,9 +76,26 @@ export default {
   display: flex;
   align-items: center;
   height: 48px;
-  border-radius: 4px;
+  border-radius: 10px 100px / 120px;
   padding: 20px 16px;
   margin-bottom: 28px;
+}
+
+.post-type{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 16px;
+
+  .type-text{
+    display: inline-block;
+    text-align: right;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #FFECB3;
+
+  }
 }
 
 </style>

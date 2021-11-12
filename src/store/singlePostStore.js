@@ -39,7 +39,19 @@ export default {
   },
   getters: {
     getSinglePost: state => {
-      return state.post;
+      const post = state.post;
+      switch (post.type) {
+        case 1:
+          post.typeText = 'main dish';
+          break;
+        case 2:
+          post.typeText = 'Dessert'; 
+          break;
+        default:
+          post.typeText = 'No type';
+          break;
+      }
+      return post;
     },
   }
 };
