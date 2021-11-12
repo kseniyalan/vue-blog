@@ -2,23 +2,23 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 
-import Home from '../views/Home.vue'
+import PostsList from '../views/PostsList.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
-import ItemView from '../views/ItemView.vue'
+import PostView from '../views/PostView.vue'
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'PostsList',
+    component: PostsList
   },
   {
-    path: '/items/:itemId',
-    name: 'ItemView',
-    component: ItemView
+    path: '/posts/:postId',
+    name: 'PostView',
+    component: PostView
   },
   {
     path: '/about',

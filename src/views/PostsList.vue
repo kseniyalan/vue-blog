@@ -7,20 +7,20 @@
     </v-row>
     
     <v-row class="list__cafes-content">
-      <v-col md="4" v-for="item in items" :key="item.id">
+      <v-col md="4" v-for="postItem in posts" :key="postItem.id"  @click="clickOnPost(postItem.id)">
         <v-card>
           
           <v-img
             height="250"
-            :src="item.img"
+            :src="postItem.img"
           ></v-img>
           
           <v-card-title>
-            <h3 class="text-h4">{{ item.title }}</h3>
+            <h3 class="text-h4">{{ postItem.title }}</h3>
           </v-card-title>
           
           <v-card-text>
-            <p class="text-body-1">{{ item.description }}</p>
+            <p class="text-body-1">{{ postItem.description }}</p>
           </v-card-text>
         
         </v-card>
@@ -31,10 +31,11 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex';
 export default {
-  name: 'ItemsList',
+  name: 'PostsList',
   data: () => ({
-    items: [
+    posts: [
       {
         id: 0,
         title: 'Cafe 1',
@@ -66,6 +67,20 @@ export default {
         img: '../assets/logo.svg'
       },
     ]
-  })
+  }),
+  computed: {
+    ...mapState({
+      //loading: state => state.posts.loading,
+    }),
+    ...mapGetters({ 
+
+    }),
+  },
+  methods: {
+    clickOnPost(postId) {
+      const url = `/posts/${postId}`;
+      this.$router.push(url);
+    },
+  },
 }
 </script>
