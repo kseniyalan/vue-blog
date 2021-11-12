@@ -9,7 +9,7 @@
       <v-col md="4">
         <v-progress-circular
           indeterminate
-          color="teal lighten-1"
+          color="amber darken-3"
         />
       </v-col>
     </v-row>
@@ -18,13 +18,13 @@
         cols="12"
         sm="6"
         md="4"
-        lg="3"
+        lg="4"
         xl="3"
         v-for="postItem in posts"
         :key="postItem.id"
         @click="clickOnPost(postItem.id)"
       >
-        <v-card>
+        <v-card class="posts-list-item">
           <v-img
             height="250"
             :src="postItem.img"
@@ -84,4 +84,9 @@ export default {
 </script>
 
 <style lang="scss">
+.posts-list{
+  .posts-list-item{
+    cursor: pointer;
+  }
+}
 </style>

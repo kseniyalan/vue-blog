@@ -8,7 +8,7 @@
         class="text-center"
         cols="12"
       >
-        <h1 class="text-h1 mb-7 teal--text text--lighten-1">
+        <h1 class="text-h1 mb-7 amber--text text--darken-3">
           Just Food
         </h1>
         <h4 class="text-h4 mb-4 brown--text text--darken-1">

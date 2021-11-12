@@ -6,7 +6,7 @@
       elevation="2"
     >
       <v-app-bar-title>
-        <h3 class="text-h4 teal--text text--lighten-1">Just Food</h3>
+        <h3 class="text-h4 amber--text text--darken-3">Just Food</h3>
       </v-app-bar-title>
       <v-spacer></v-spacer>
       <div id="nav">
@@ -39,9 +39,14 @@
     color: #2c3e50;
     text-decoration: none;
     text-transform: uppercase;
+    transition: color 0.3s;
+
+    &:hover{
+      color: #FFA000;
+    }
 
     &.router-link-exact-active {
-      color: #26A69A;
+      color: #FF8F00;
     }
   }
 

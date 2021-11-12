@@ -6,7 +6,7 @@
           <!-- Image -->
           <template slot="progress">
             <v-progress-linear
-              color="teal lighten-1"
+              color="amber darken-3"
               height="3"
               indeterminate
             />
