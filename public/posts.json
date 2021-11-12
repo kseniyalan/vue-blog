@@ -4,35 +4,35 @@
     "title": "Recipe 1",
     "description_short": "The best! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "type": 1,
-    "img": "logo.svg"
+    "img": "recipe1.jpg"
   },
   {
     "id": 1,
     "title": "Recipe 2",
     "description_short": "The second! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "type": 2,
-    "img": "logo.svg"
+    "img": "recipe1.jpg"
   },
   {
     "id": 2,
     "title": "Recipe 3",
     "description_short": "The third! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "type": 1,
-    "img": "logo.svg"
+    "img": "recipe1.jpg"
   },
   {
     "id": 3,
     "title": "Recipe 4",
     "description_short": "The fourth! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "type": 2,
-    "img": "logo.svg"
+    "img": "recipe1.jpg"
   },
   {
     "id": 4,
     "title": "Recipe 5",
     "description_short": "The fifth! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "type": null,
-    "img": "logo.svg"
+    "img": "recipe1.jpg"
   }
 ]
 }

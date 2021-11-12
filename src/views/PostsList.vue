@@ -42,7 +42,7 @@
           </v-row>
           
           <v-card-text class="text-body-2 text-xl-body-1">
-            <p>{{ postItem.description_short }}</p>
+            <p class="mb-3">{{ postItem.description_short }}</p>
             <p class="font-weight-bold">Read more</p>
           </v-card-text>
         
