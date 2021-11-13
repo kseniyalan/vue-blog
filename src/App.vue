@@ -11,7 +11,7 @@
       <v-spacer></v-spacer>
       <div id="nav">
         <router-link to="/">Home</router-link>
-        <router-link to="/posts">Posts</router-link>
+        <router-link to="/posts">Blog</router-link>
         <router-link to="/contact">Contact</router-link>
       </div>
     </v-app-bar>
