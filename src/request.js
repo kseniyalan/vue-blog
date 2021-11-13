@@ -1,16 +1,6 @@
 import axios from 'axios';
 
-//export const baseURL = 'http://localhost:8080/';
-
-//const host = window.location.host;
-//const protocol = window.location.protocol;
-//const baseURL = protocol + '//' + host;
 const baseURL = process.env.BASE_URL;
-const path = process.env.NODE_ENV === 'production' ? 'vue-blog/' : '';
-const newURL = `${baseURL}${path}`;
-console.log('ENV: ', process.env.NODE_ENV, 'baseURL: ', baseURL);
-console.log('baseURL: ', baseURL, 'path: ', path, 'newURL: ', newURL);
-
 
 const ax = axios.create({baseURL});
 
