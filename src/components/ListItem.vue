@@ -5,6 +5,7 @@
     md="4"
     lg="4"
     xl="3"
+    class="list-item"
     @click="onClickPost(postItem.id)"
   >
     <v-card class="posts-list-item">
@@ -50,7 +51,14 @@ export default {
 </script>
 
 <style lang="scss">
-.posts-list-item{
+.list-item{
   cursor: pointer;
+
+  &:hover{
+    .posts-list-item{
+      box-shadow: 5px 5px 5px rgba(0,0,0,0.15);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+  }
 }
 </style>

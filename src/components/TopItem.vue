@@ -52,6 +52,11 @@ export default {
   height: 564px;
   cursor: pointer;
 
+  &:hover{
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
   .item-content{
     position: relative;
     width: 100%;
