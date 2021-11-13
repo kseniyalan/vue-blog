@@ -75,7 +75,7 @@ export default {
 .highlighted{
   display: flex;
   align-items: center;
-  height: 48px;
+  min-height: 48px;
   border-radius: 10px 100px / 120px;
   padding: 20px 16px;
   margin-bottom: 28px;
