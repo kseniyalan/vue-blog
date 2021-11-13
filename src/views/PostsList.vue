@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Top posts block -->
     <div class="d-none d-md-flex top-block">
       <v-row v-if="loading" class="d-flex justify-center mb-6">
         <v-col md="4">
@@ -9,18 +10,40 @@
           />
         </v-col>
       </v-row>
-      <v-row v-if="ready" class="d-flex justify-center mb-16 mt-6">
-        <v-col
+      <v-row v-if="ready" class="d-flex mb-16 mt-6">
+        <div
           class="top-item"
           v-for="postItem in topPosts"
           :key="postItem.id"
           @click="clickOnPost(postItem.id)"
-        >
-          {{ postItem.title }}
-        </v-col>
-      </v-row>
+        > 
+          <v-img
+            height="564"
+            :src="postItem.img"
+            class="mb-6"
+          >
+            <div class="item-content fluid fill-height">
+              <div class="text-caption text-uppercase white--text text-center">{{ postItem.typeText }}</div>
+              <v-card-title class="d-flex justify-center mb-16">
+                <h4 class="text-h5 text-md-h4 white--text text-capitalize">{{ postItem.title }}</h4>
+              </v-card-title>
 
+              <!-- Button -->
+              <v-btn
+                tile
+                outlined
+                color="white"
+                class="more-btn"
+              >
+                Read more
+              </v-btn>
+            </div>
+          </v-img>
+        </div>
+      </v-row>
     </div>
+
+    <!-- Posts list -->
     <v-container>
       <v-row v-if="ready" class="posts-list">
         <v-col
@@ -41,7 +64,7 @@
             ></v-img>
             <div class="text-caption text-uppercase">{{ postItem.typeText }}</div>
             <v-card-title class="d-flex justify-center">
-              <h3 class="text-h6 text-xl-h5">{{ postItem.title }}</h3>
+              <h4 class="text-h5 text-md-h4 text-capitalize">{{ postItem.title }}</h4>
             </v-card-title>
 
             <v-row class="d-flex justify-center">
@@ -99,8 +122,29 @@ export default {
 <style lang="scss">
 .top-block{
   .top-item{
+    position: relative;
+    width: calc((100% - 30px)/4);
+    max-width: 25%;
     height: 564px;
-    background-color: aquamarine;
+    cursor: pointer;
+
+    .img-wrapper{
+      opacity: 0.7;
+    }
+
+    .item-content{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 320px 55px 55px 55px;
+
+      .more-btn{
+        position: absolute;
+        left: calc(50% - 60px);
+        bottom: 55px;
+        width: 120px;
+      }
+    }
   }
 
   .top-item + .top-item{
@@ -108,6 +152,7 @@ export default {
   }
 
 }
+
 .posts-list{
   .posts-list-item{
     cursor: pointer;
