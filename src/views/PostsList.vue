@@ -10,7 +10,7 @@
           />
         </v-col>
       </v-row>
-      <v-row v-if="ready" class="d-flex mb-16 mt-6">
+      <v-row v-if="ready" class="d-flex mb-16">
         <TopItem
           v-for="postItem in topPosts"
           :key="postItem.id"

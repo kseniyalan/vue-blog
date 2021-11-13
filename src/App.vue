@@ -3,7 +3,7 @@
     <v-app-bar
       app
       color="white"
-      elevation="2"
+      elevate-on-scroll
     >
       <v-app-bar-title class="d-none d-sm-flex">
         <h3 class="text-h4 amber--text text--darken-3">Just Food</h3>
