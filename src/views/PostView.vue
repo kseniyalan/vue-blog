@@ -12,7 +12,7 @@
             />
           </template>
           <v-img
-            height="350"
+            height="400"
             :src="postItem.img"
             class="d-flex align-end"
             @click="openImageModal"

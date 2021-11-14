@@ -11,7 +11,7 @@
   >
     <v-card>
       <v-card-title class="headline">{{ header }}</v-card-title>
-      <v-card-text style="height: 95%;">
+      <v-card-text style="height: 95%;" class="d-flex justify-center align-center">
         <v-img
           max-width="1600"
           max-height="900"
