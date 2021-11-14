@@ -16,7 +16,7 @@
           <v-img
             v-if="isMobile"
             height="400"
-            class="d-flex align-end"
+            class="d-flex align-end post-image"
             @click="openImageModal"
             :src="postItem.img_600"
             :srcset="`${postItem.img_2x} 2x, ${postItem.img_3x} 3x, ${postItem.img_4x} 4x`"
@@ -26,7 +26,7 @@
           <v-img
             v-else
             height="500"
-            class="d-flex align-end"
+            class="d-flex align-end post-image"
             @click="openImageModal"
             :src="postItem.img_1920"
             :srcset="`${postItem.img_1920_2x} 1920w 2x, ${postItem.img_1600} 1366w, ${postItem.img_1024} 876w`"
@@ -150,6 +150,10 @@ export default {
   border-radius: 10px 100px / 120px;
   padding: 20px 16px;
   margin-bottom: 28px;
+}
+
+.post-image{
+  cursor: pointer;
 }
 
 .post-type{
