@@ -1,5 +1,10 @@
 # vuetify-app
 
+The project is a SPA web application with Vue.js + Vuex and Vuetify for Material UI.
+
+See [Online Demo](https://kseniyalan.github.io/vue-blog/) here.
+
+
 ## Project setup
 ```
 npm install
