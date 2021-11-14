@@ -13,6 +13,7 @@
         height="250"
         class="mb-6"
         :src="postItem.img"
+        :srcset="`${postItem.img_2x} 2x, ${postItem.img_3x} 3x, ${postItem.img_4x} 4x`"
       ></v-img>
       <div class="text-caption text-uppercase">{{ postItem.typeText }}</div>
       <v-card-title class="d-flex justify-center">

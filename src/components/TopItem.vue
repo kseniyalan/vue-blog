@@ -6,8 +6,8 @@
     <v-img
       height="564"
       class="mb-6"
-      :src="postItem.img"
-      
+      :src="postItem.img_top"
+      :srcset="`${postItem.img_top_2x} 2x, ${postItem.img_top_3x} 3x,`"
     >
       <div class="item-content fluid fill-height">
         <div class="text-caption text-uppercase white--text text-center">{{ postItem.typeText }}</div>
