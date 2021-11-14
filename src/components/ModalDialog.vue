@@ -7,17 +7,34 @@
     scrollable
     :fullscreen="fullscreen"
     :hide-overlay="hideOverlay"
-    transition="dialog-top-transition"
+    transition="fab-transition"
   >
     <v-card>
       <v-card-title class="headline">{{ header }}</v-card-title>
       <v-card-text style="height: 95%;" class="d-flex justify-center align-center">
+
+        <!-- Image for mobiles -->
         <v-img
+          v-if="fullscreen" 
+          max-width="800"
+          max-height="600"
+          class="d-flex align-end"
+          :src="postItem.img_600"
+          :srcset="`${postItem.img_2x} 2x, ${postItem.img_3x} 3x, ${postItem.img_4x} 4x`"
+        />
+
+        <!-- Big image -->
+        <v-img
+          v-else
           max-width="1600"
           max-height="900"
-          :src="imgSrc"
-          class="d-flex align-end">
-        </v-img>
+          class="d-flex align-end"
+          :src="postItem.img_1920"
+          :srcset="`${postItem.img_1920_2x} 1920w 2x, ${postItem.img_1600} 1366w, ${postItem.img_1024} 876w`"
+          sizes="(min-width: 1920px) 1920px,
+                  (min-width: 1600px) 1366px,
+                  (min-width: 1024px) 876px"
+        />
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
@@ -39,8 +56,8 @@ export default {
       type: Boolean,
       require: true,
     },
-    imgSrc: {
-      type: String,
+    postItem: {
+      type: Object,
       require: true,
     },
     onSubmit: {

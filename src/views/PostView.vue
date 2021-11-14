@@ -25,7 +25,7 @@
           <!-- Big image -->
           <v-img
             v-else
-            height="400"
+            height="500"
             class="d-flex align-end"
             @click="openImageModal"
             :src="postItem.img_1920"
@@ -47,6 +47,7 @@
               {{ postItem.description_short }}
             </div>
             <div class="font-weight-light text-left mb-7" v-html="postItem.description" />
+
             <!-- Image for mobiles -->
             <v-img
               v-if="isMobile"
@@ -60,7 +61,7 @@
             <!-- Big image -->
             <v-img
               v-else
-              height="400"
+              height="500"
               class="d-flex align-end"
               @click="openImageModal"
               :src="postItem.img_1920"
@@ -81,7 +82,7 @@
       hideOverlay
       :header="postItem.title"
       :isOpen="imageModal"
-      :imgSrc="postItem.img"
+      :postItem="postItem"
       :onSubmit="closeImageModal"
     />
 
@@ -90,7 +91,7 @@
       v-else
       :header="postItem.title"
       :isOpen="imageModal"
-      :imgSrc="postItem.img"
+      :postItem="postItem"
       :onSubmit="closeImageModal"
     />
   </v-container>
