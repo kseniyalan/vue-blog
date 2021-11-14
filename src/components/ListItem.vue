@@ -11,12 +11,12 @@
     <v-card class="posts-list-item">
       <v-img
         height="250"
-        :src="postItem.img"
         class="mb-6"
+        :src="postItem.img"
       ></v-img>
       <div class="text-caption text-uppercase">{{ postItem.typeText }}</div>
       <v-card-title class="d-flex justify-center">
-        <h4 class="text-h5 text-md-h4 text-capitalize">{{ postItem.title }}</h4>
+        <h4 class="text-h5 text-md-h4 text-capitalize">{{ postItem.title }}</h4> 
       </v-card-title>
 
       <v-row class="d-flex justify-center">

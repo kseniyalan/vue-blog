@@ -5,8 +5,9 @@
   > 
     <v-img
       height="564"
-      :src="postItem.img"
       class="mb-6"
+      :src="postItem.img"
+      
     >
       <div class="item-content fluid fill-height">
         <div class="text-caption text-uppercase white--text text-center">{{ postItem.typeText }}</div>
