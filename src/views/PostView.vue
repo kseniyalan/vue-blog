@@ -11,12 +11,13 @@
               indeterminate
             />
           </template>
-            <v-parallax
-              height="450"
-              :src="postItem.img"
-              class="d-flex">
-            </v-parallax>
-
+          <v-img
+            height="350"
+            :src="postItem.img"
+            class="d-flex align-end"
+            @click="openImageModal"
+          >
+          </v-img>
           <!-- Header -->
           <div class="post-type mb-8">
             <div class="type-text">{{ postItem.typeText }}</div>
@@ -38,15 +39,31 @@
         </v-card>
       </v-col>
     </v-row>
+
+    <!-- Image Modal -->
+    <ModalDialog
+      :header="postItem.title"
+      :isOpen="imageModal"
+      :imgSrc="postItem.img"
+      :onSubmit="closeImageModal"
+    />
   </v-container>
 </template>
 
 <script>
 import { mapState, mapGetters } from 'vuex';
+import ModalDialog from "@/components/ModalDialog.vue";
+
 export default {
   name: 'PostView',
-  props: {},
-  data: () => ({}),
+  components: {
+    ModalDialog,
+  },
+  data() {
+    return {
+      imageModal: false,
+    };
+  },
   computed: {
     ...mapState({
       loading: state => state.post.loading,
@@ -57,8 +74,11 @@ export default {
     }),
   },
   methods: {
-    clickOnImage() {
-
+    openImageModal() {
+      this.imageModal = true;
+    },
+    closeImageModal() {
+      this.imageModal = false;
     },
     getSinglePost(){
       const postId = this.$route.params.postId;
