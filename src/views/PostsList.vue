@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Top posts block -->
-    <div class="d-none d-md-flex">
+    <v-container>
       <v-row v-if="loading" class="d-flex justify-center mb-6">
         <v-col md="4">
           <v-progress-circular
@@ -10,7 +10,9 @@
           />
         </v-col>
       </v-row>
-      <v-row v-if="ready" class="d-flex mb-16">
+    </v-container>
+    <v-container v-if="ready" class="top-container">
+      <v-row v-if="screenWidth > 1599" class="d-flex mb-16">
         <TopItem
           v-for="postItem in topPosts"
           :key="postItem.id"
@@ -18,7 +20,7 @@
           :onClickPost="clickOnPost"
         />
       </v-row>
-    </div>
+    </v-container>
 
     <!-- Posts list -->
     <v-container>
@@ -54,6 +56,9 @@ export default {
     ...mapGetters({ 
       posts: 'posts/getPosts',
     }),
+    screenWidth() {
+      return parseInt(this.$vuetify.breakpoint.width, 10);
+    },
     topPosts() {
       return this.posts.slice(0, 4);
     },
@@ -72,3 +77,10 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.top-container{
+  padding: 0;
+  max-width: 100%;
+}
+</style>
