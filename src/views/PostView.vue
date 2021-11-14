@@ -11,11 +11,11 @@
               indeterminate
             />
           </template>
-          <v-parallax
-            height="400"
-            src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
-            class="d-flex"
-          />
+            <v-parallax
+              height="450"
+              :src="postItem.img"
+              class="d-flex">
+            </v-parallax>
 
           <!-- Header -->
           <div class="post-type mb-8">
@@ -31,7 +31,7 @@
             <div class="font-weight-light text-left mb-7" v-html="postItem.description" />
             <v-img
               height="350"
-              src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
+              :src="postItem.img"
               class="d-flex align-end">
             </v-img>
           </v-card-text>
