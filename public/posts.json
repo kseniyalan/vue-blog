@@ -4,13 +4,13 @@
     "title": "My recipe 1",
     "description_short": "The best! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "type": 1,
-    "img_top": "http://localhost:8080/dessert/pancakes-876.jpg",
-    "img_top_2x": "http://localhost:8080/dessert/pancakes-1920.jpg",
-    "img_top_3x": "http://localhost:8080/dessert/pancakes-3840.jpg",
-    "img": "http://localhost:8080/dessert/pancakes-388.jpg",
-    "img_2x": "http://localhost:8080/dessert/pancakes-876.jpg",
-    "img_3x": "http://localhost:8080/dessert/pancakes-1366.jpg",
-    "img_4x": "http://localhost:8080/dessert/pancakes-1440.jpg"
+    "img_top": "http://localhost:8080/pizza/pizza-876.jpg",
+    "img_top_2x": "http://localhost:8080/pizza/pizza-1920.jpg",
+    "img_top_3x": "http://localhost:8080/pizza/pizza-3840.jpg",
+    "img": "http://localhost:8080/pizza/pizza-388.jpg",
+    "img_2x": "http://localhost:8080/pizza/pizza-876.jpg",
+    "img_3x": "http://localhost:8080/pizza/pizza-1366.jpg",
+    "img_4x": "http://localhost:8080/pizza/pizza-1440.jpg"
 
   },
   {
@@ -31,13 +31,13 @@
     "title": "My recipe 3",
     "description_short": "The third! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "type": 1,
-    "img_top": "http://localhost:8080/dessert/pancakes-876.jpg",
-    "img_top_2x": "http://localhost:8080/dessert/pancakes-1920.jpg",
-    "img_top_3x": "http://localhost:8080/dessert/pancakes-3840.jpg",
-    "img": "http://localhost:8080/dessert/pancakes-388.jpg",
-    "img_2x": "http://localhost:8080/dessert/pancakes-876.jpg",
-    "img_3x": "http://localhost:8080/dessert/pancakes-1366.jpg",
-    "img_4x": "http://localhost:8080/dessert/pancakes-1440.jpg"
+    "img_top": "http://localhost:8080/pizza/pizza-876.jpg",
+    "img_top_2x": "http://localhost:8080/pizza/pizza-1920.jpg",
+    "img_top_3x": "http://localhost:8080/pizza/pizza-3840.jpg",
+    "img": "http://localhost:8080/pizza/pizza-388.jpg",
+    "img_2x": "http://localhost:8080/pizza/pizza-876.jpg",
+    "img_3x": "http://localhost:8080/pizza/pizza-1366.jpg",
+    "img_4x": "http://localhost:8080/pizza/pizza-1440.jpg"
   },
   {
     "id": 3,

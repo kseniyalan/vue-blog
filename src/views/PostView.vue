@@ -11,13 +11,30 @@
               indeterminate
             />
           </template>
+
+          <!-- Image for mobiles -->
           <v-img
+            v-if="isMobile"
             height="400"
-            :src="postItem.img"
             class="d-flex align-end"
             @click="openImageModal"
-          >
-          </v-img>
+            :src="postItem.img_600"
+            :srcset="`${postItem.img_2x} 2x, ${postItem.img_3x} 3x, ${postItem.img_4x} 4x`"
+          />
+
+          <!-- Big image -->
+          <v-img
+            v-else
+            height="400"
+            class="d-flex align-end"
+            @click="openImageModal"
+            :src="postItem.img_1920"
+            :srcset="`${postItem.img_1920_2x} 1920w 2x, ${postItem.img_1600} 1366w, ${postItem.img_1024} 876w`"
+            sizes="(min-width: 1920px) 1920px,
+                    (min-width: 1600px) 1366px,
+                    (min-width: 1024px) 876px"
+          />
+
           <!-- Header -->
           <div class="post-type mb-8">
             <div class="type-text">{{ postItem.typeText }}</div>
@@ -30,11 +47,28 @@
               {{ postItem.description_short }}
             </div>
             <div class="font-weight-light text-left mb-7" v-html="postItem.description" />
+            <!-- Image for mobiles -->
             <v-img
-              height="350"
-              :src="postItem.img"
-              class="d-flex align-end">
-            </v-img>
+              v-if="isMobile"
+              height="400"
+              class="d-flex align-end"
+              @click="openImageModal"
+              :src="postItem.img_600"
+              :srcset="`${postItem.img_2x} 2x, ${postItem.img_3x} 3x, ${postItem.img_4x} 4x`"
+            />
+
+            <!-- Big image -->
+            <v-img
+              v-else
+              height="400"
+              class="d-flex align-end"
+              @click="openImageModal"
+              :src="postItem.img_1920"
+              :srcset="`${postItem.img_1920_2x} 1920w 2x, ${postItem.img_1600} 1366w, ${postItem.img_1024} 876w`"
+              sizes="(min-width: 1920px) 1920px,
+                      (min-width: 1600px) 1366px,
+                      (min-width: 1024px) 876px"
+            />
           </v-card-text>
         </v-card>
       </v-col>
@@ -84,7 +118,7 @@ export default {
     ...mapGetters({ 
       postItem: 'post/getSinglePost',
     }),
-    isMobile () {
+    isMobile() {
       if (this.$vuetify.breakpoint.name === 'xs') return true;
       return false;
     },
