@@ -48,7 +48,6 @@ export default {
 .top-item{
   position: relative;
   width: calc((100% - 30px)/4);
-  max-width: 24%;
   height: 564px;
   cursor: pointer;
 
