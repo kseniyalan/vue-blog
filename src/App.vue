@@ -31,10 +31,6 @@ export default {
       return false;
     },
   },
-  created() {
-    console.log('Route: ', this.$route.path);
-    console.log(this.$route.path === '/');
-  },
 }
 </script>
 

@@ -9,7 +9,6 @@ export const getPostsList = async () => {
   let response;
   try {
     response = await ax.get('posts.json');
-    console.log('response: ', response);
   } catch {
     throw new Error('Posts loading failed');
   }
@@ -22,7 +21,6 @@ export const getSinglePost = async postId => {
   let response;
   try {
     response = await ax.get(url);
-    console.log('single response: ', response);
   } catch {
     throw new Error('Single post loading failed');
   }

@@ -40,8 +40,20 @@
       </v-col>
     </v-row>
 
+    <!--  Fullscreen Image Modal for mobiles -->
+    <ModalDialog
+      v-if="isMobile"
+      fullscreen
+      hideOverlay
+      :header="postItem.title"
+      :isOpen="imageModal"
+      :imgSrc="postItem.img"
+      :onSubmit="closeImageModal"
+    />
+
     <!-- Image Modal -->
     <ModalDialog
+      v-else
       :header="postItem.title"
       :isOpen="imageModal"
       :imgSrc="postItem.img"
@@ -72,6 +84,10 @@ export default {
     ...mapGetters({ 
       postItem: 'post/getSinglePost',
     }),
+    isMobile () {
+      if (this.$vuetify.breakpoint.name === 'xs') return true;
+      return false;
+    },
   },
   methods: {
     openImageModal() {

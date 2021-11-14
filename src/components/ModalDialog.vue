@@ -5,6 +5,8 @@
     max-height="95%"
     persistent
     scrollable
+    :fullscreen="fullscreen"
+    :hide-overlay="hideOverlay"
     transition="dialog-top-transition"
   >
     <v-card>
