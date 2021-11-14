@@ -38,6 +38,7 @@
 import { mapState, mapGetters } from 'vuex';
 import TopItem from "@/components/TopItem.vue";
 import ListItem from "@/components/ListItem.vue";
+
 export default {
   name: 'PostsList',
   components: {
@@ -71,7 +72,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app :class="{ isHomePage: isHomePage }">
     <v-app-bar
       app
       color="white"
@@ -21,6 +21,23 @@
   </v-app>
 </template>
 
+<script>
+export default {
+  name: 'App',
+  data: () => ({}),
+  computed: {
+    isHomePage() {
+      if (this.$route.path === '/') return true;
+      return false;
+    },
+  },
+  created() {
+    console.log('Route: ', this.$route.path);
+    console.log(this.$route.path === '/');
+  },
+}
+</script>
+
 <style lang="scss">
 #app {
   font-family: Roboto, sans-serif;
@@ -28,6 +45,11 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.isHomePage{
+  //background: url('./assets/images/oranges.jpg') center center no-repeat !important;
+  //background-size: contain;
 }
 
 #nav {
